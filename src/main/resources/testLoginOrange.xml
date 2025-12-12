@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Bai1.1">
+	<test name="Test Login">
+		<parameter name="excelPath"
+			value="D:\\workspace\\kiem_thu_tu_dong\\kiem_tra\\data_login_orange.xlsx" />
+		<classes>
+			<class name="Cau1.Bai1" />
+		</classes>
+	</test>
+</suite>

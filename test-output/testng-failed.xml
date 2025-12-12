@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Cau2]">
+  <test thread-count="5" name="Test Remove Products(failed)">
+    <classes>
+      <class name="Cau2.RemoveProduct">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="testRemoveProductFromCart"/>
+        </methods>
+      </class> <!-- Cau2.RemoveProduct -->
+    </classes>
+  </test> <!-- Test Remove Products(failed) -->
+</suite> <!-- Failed suite [Cau2] -->

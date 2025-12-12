@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<suite name="Cau2">
+	<test name="Test Sort Products">
+		<parameter name="excelPath"
+			value="D:\\workspace\\kiem_thu_tu_dong\\kiem_tra\\data_sort.xlsx" />
+		<classes>
+			<class name="Cau2.SortProduct" />
+		</classes>
+	</test>
+
+	<test name="Test Remove Products">
+		<parameter name="excelPath"
+			value="D:\\workspace\\kiem_thu_tu_dong\\kiem_tra\\data_remove.xlsx" />
+		<classes>
+			<class name="Cau2.RemoveProduct" />
+		</classes>
+	</test>
+</suite>

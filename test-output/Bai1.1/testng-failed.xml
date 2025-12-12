@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Bai1.1]">
+  <test thread-count="5" name="Test Login(failed)">
+    <parameter name="excelPath" value="D:\\workspace\\kiem_thu_tu_dong\\kiem_tra\\data_login_orange.xlsx"/>
+    <classes>
+      <class name="Cau1.Bai1">
+        <methods>
+          <include name="testLoginOrangeHRM" invocation-numbers="1"/>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+        </methods>
+      </class> <!-- Cau1.Bai1 -->
+    </classes>
+  </test> <!-- Test Login(failed) -->
+</suite> <!-- Failed suite [Bai1.1] -->
