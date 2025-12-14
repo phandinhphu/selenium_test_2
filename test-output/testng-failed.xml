@@ -2,12 +2,13 @@
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [Cau2]">
   <test thread-count="5" name="Test Remove Products(failed)">
+    <parameter name="excelPath" value="D:\\workspace\\kiem_thu_tu_dong\\selenium_test_2\\data_remove.xlsx"/>
     <classes>
       <class name="Cau2.RemoveProduct">
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="testRemoveProductFromCart"/>
+          <include name="testRemoveProductFromCart" invocation-numbers="1"/>
         </methods>
       </class> <!-- Cau2.RemoveProduct -->
     </classes>

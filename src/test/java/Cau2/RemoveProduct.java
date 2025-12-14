@@ -1,15 +1,18 @@
 package Cau2;
 
+import java.util.Map;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.Assert;
 import org.testng.Reporter;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.*;
 import org.testng.annotations.Test;
 
 import com.kiem_tra.init.InitBrowser;
 import com.kiem_tra.page.saucedemo.InventoryPage;
 import com.kiem_tra.page.saucedemo.LoginPage;
+
+import utils.FileDataProvider;
 
 public class RemoveProduct {
 	private WebDriver driver;
@@ -23,26 +26,30 @@ public class RemoveProduct {
 		inventoryPage = new InventoryPage(driver);
 	}
 	
-	@Test
-	public void testRemoveProductFromCart() throws InterruptedException {
+	@Test(dataProvider = "excelData", dataProviderClass = FileDataProvider.class)
+	public void testRemoveProductFromCart(Map<String, String> data) throws InterruptedException {
 		Reporter.log("Step 1 : Điều hướng đến trang đăng nhập", true);
 		loginPage.navigateToLoginPage();
 
 		Reporter.log("Step 2 : Đăng nhập với tài khoản hợp lệ", true);
-		loginPage.enterUsername("standard_user");
-		loginPage.enterPassword("secret_sauce");
+		System.out.println("Username: " + data.get("UserName"));
+		System.out.println("Password: " + data.get("Password"));
+		loginPage.enterUsername(data.get("UserName"));
+		loginPage.enterPassword(data.get("Password"));
 		loginPage.clickLoginButton();
 		Thread.sleep(2000);
 		
 		Reporter.log("Step 3: Kiểm tra có sản phẩm hiển thị trên trang Inventory", true);
 		int productsCount = inventoryPage.getProductsCount();
+		System.out.println("Products count: " + productsCount);
 		Assert.assertTrue(productsCount > 0, "No products found on Inventory page");
 		
 		String cartItemCountInitial = inventoryPage.getCartItemCount();
 		int intCartItemCountInitial = cartItemCountInitial.isEmpty() ? 0 : Integer.parseInt(cartItemCountInitial);
 
+		int idxProduct = (int) Double.parseDouble(data.get("ProductIndex"));
 		Reporter.log("Step 4 : Thêm một sản phẩm vào giỏ hàng", true);
-		inventoryPage.addProductToCartByIndex(0);
+		inventoryPage.addProductToCartByIndex(idxProduct);
 		Thread.sleep(2000);
 		
 		Reporter.log("Step 5 : Xác minh sản phẩm đã được thêm vào giỏ hàng", true);

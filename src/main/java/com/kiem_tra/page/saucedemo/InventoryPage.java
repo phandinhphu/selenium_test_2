@@ -2,6 +2,7 @@ package com.kiem_tra.page.saucedemo;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.Select;
 
 public class InventoryPage {
 	private WebDriver driver;
@@ -17,7 +18,13 @@ public class InventoryPage {
 	
 	// Actions methods
 	public void selectSortOption(String optionValue) {
-		driver.findElement(sortDropdown).sendKeys(optionValue);
+	    Select select = new Select(driver.findElement(sortDropdown));
+	    select.selectByVisibleText(optionValue.trim());
+	}
+	
+	public String getSelectedSortOption() {
+	    Select select = new Select(driver.findElement(sortDropdown));
+	    return select.getFirstSelectedOption().getText();
 	}
 	
 	public int getProductsCount() {

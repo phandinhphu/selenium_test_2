@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+<testng-results ignored="0" total="4" passed="4" failed="0" skipped="0">
   <reporter-output>
     <line>
       <![CDATA[Step 1 : Điều hướng đến trang đăng nhập]]>
@@ -8,10 +8,43 @@
       <![CDATA[Step 2 : Đăng nhập với tài khoản hợp lệ]]>
     </line>
     <line>
-      <![CDATA[Step 3 : Chọn tùy chọn sắp xếp 'Name (Z to A)']]>
+      <![CDATA[Step 3 : Chọn tùy chọn sắp xếp]]>
     </line>
     <line>
-      <![CDATA[Step 4 : Xác minh sản phẩm được sắp xếp theo tên từ Z đến A]]>
+      <![CDATA[Step 4 : Xác minh sản phẩm được sắp xếp]]>
+    </line>
+    <line>
+      <![CDATA[Step 1 : Điều hướng đến trang đăng nhập]]>
+    </line>
+    <line>
+      <![CDATA[Step 2 : Đăng nhập với tài khoản hợp lệ]]>
+    </line>
+    <line>
+      <![CDATA[Step 3 : Chọn tùy chọn sắp xếp]]>
+    </line>
+    <line>
+      <![CDATA[Step 4 : Xác minh sản phẩm được sắp xếp]]>
+    </line>
+    <line>
+      <![CDATA[Step 1 : Điều hướng đến trang đăng nhập]]>
+    </line>
+    <line>
+      <![CDATA[Step 2 : Đăng nhập với tài khoản hợp lệ]]>
+    </line>
+    <line>
+      <![CDATA[Step 3: Kiểm tra có sản phẩm hiển thị trên trang Inventory]]>
+    </line>
+    <line>
+      <![CDATA[Step 4 : Thêm một sản phẩm vào giỏ hàng]]>
+    </line>
+    <line>
+      <![CDATA[Step 5 : Xác minh sản phẩm đã được thêm vào giỏ hàng]]>
+    </line>
+    <line>
+      <![CDATA[Step 6 : Xóa sản phẩm khỏi giỏ hàng]]>
+    </line>
+    <line>
+      <![CDATA[Step 7 : Xác minh sản phẩm đã được xóa khỏi giỏ hàng]]>
     </line>
     <line>
       <![CDATA[Step 1 : Điều hướng đến trang đăng nhập]]>
@@ -35,16 +68,23 @@
       <![CDATA[Step 7 : Xác minh sản phẩm đã được xóa khỏi giỏ hàng]]>
     </line>
   </reporter-output>
-  <suite started-at="2025-12-09T10:40:11 ICT" name="Cau2" finished-at="2025-12-09T10:40:25 ICT" duration-ms="13284">
+  <suite started-at="2025-12-14T23:22:47 ICT" name="Cau2" finished-at="2025-12-14T23:23:58 ICT" duration-ms="70929">
     <groups>
     </groups>
-    <test started-at="2025-12-09T10:40:11 ICT" name="Test Sort Products" finished-at="2025-12-09T10:40:16 ICT" duration-ms="4624">
+    <test started-at="2025-12-14T23:22:47 ICT" name="Test Sort Products" finished-at="2025-12-14T23:23:21 ICT" duration-ms="34583">
       <class name="Cau2.SortProduct">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Cau2.SortProduct@5bf0d49]" started-at="2025-12-09T10:40:11 ICT" name="setUp" finished-at="2025-12-09T10:40:13 ICT" duration-ms="1181" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Cau2.SortProduct@1d296da]" started-at="2025-12-14T23:22:50 ICT" name="setUp" finished-at="2025-12-14T23:22:59 ICT" duration-ms="8893" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testSortProductsByNameZToA()[pri:0, instance:Cau2.SortProduct@5bf0d49]" started-at="2025-12-09T10:40:13 ICT" name="testSortProductsByNameZToA" finished-at="2025-12-09T10:40:16 ICT" duration-ms="3017" status="PASS">
+        <test-method signature="testSortProducts(java.util.Map)[pri:0, instance:Cau2.SortProduct@1d296da]" started-at="2025-12-14T23:22:59 ICT" name="testSortProducts" data-provider="excelData" finished-at="2025-12-14T23:23:06 ICT" duration-ms="6975" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{UserName=standard_user, SortOption=Name (Z to A), Password=secret_sauce}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Step 1 : Điều hướng đến trang đăng nhập]]>
@@ -53,26 +93,64 @@
               <![CDATA[Step 2 : Đăng nhập với tài khoản hợp lệ]]>
             </line>
             <line>
-              <![CDATA[Step 3 : Chọn tùy chọn sắp xếp 'Name (Z to A)']]>
+              <![CDATA[Step 3 : Chọn tùy chọn sắp xếp]]>
             </line>
             <line>
-              <![CDATA[Step 4 : Xác minh sản phẩm được sắp xếp theo tên từ Z đến A]]>
+              <![CDATA[Step 4 : Xác minh sản phẩm được sắp xếp]]>
             </line>
           </reporter-output>
-        </test-method> <!-- testSortProductsByNameZToA -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Cau2.SortProduct@5bf0d49]" started-at="2025-12-09T10:40:16 ICT" name="tearDown" finished-at="2025-12-09T10:40:16 ICT" duration-ms="396" status="PASS">
+        </test-method> <!-- testSortProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Cau2.SortProduct@1d296da]" started-at="2025-12-14T23:23:06 ICT" name="tearDown" finished-at="2025-12-14T23:23:07 ICT" duration-ms="1617" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Cau2.SortProduct@1d296da]" started-at="2025-12-14T23:23:07 ICT" name="setUp" finished-at="2025-12-14T23:23:12 ICT" duration-ms="4549" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testSortProducts(java.util.Map)[pri:0, instance:Cau2.SortProduct@1d296da]" started-at="2025-12-14T23:23:12 ICT" name="testSortProducts" data-provider="excelData" finished-at="2025-12-14T23:23:19 ICT" duration-ms="7243" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{UserName=standard_user, SortOption=Name (A to Z), Password=secret_sauce}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Step 1 : Điều hướng đến trang đăng nhập]]>
+            </line>
+            <line>
+              <![CDATA[Step 2 : Đăng nhập với tài khoản hợp lệ]]>
+            </line>
+            <line>
+              <![CDATA[Step 3 : Chọn tùy chọn sắp xếp]]>
+            </line>
+            <line>
+              <![CDATA[Step 4 : Xác minh sản phẩm được sắp xếp]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testSortProducts -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Cau2.SortProduct@1d296da]" started-at="2025-12-14T23:23:19 ICT" name="tearDown" finished-at="2025-12-14T23:23:21 ICT" duration-ms="2176" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- Cau2.SortProduct -->
     </test> <!-- Test Sort Products -->
-    <test started-at="2025-12-09T10:40:16 ICT" name="Test Remove Products" finished-at="2025-12-09T10:40:25 ICT" duration-ms="8627">
+    <test started-at="2025-12-14T23:23:22 ICT" name="Test Remove Products" finished-at="2025-12-14T23:23:58 ICT" duration-ms="36244">
       <class name="Cau2.RemoveProduct">
-        <test-method is-config="true" signature="setUp()[pri:0, instance:Cau2.RemoveProduct@6200f9cb]" started-at="2025-12-09T10:40:16 ICT" name="setUp" finished-at="2025-12-09T10:40:17 ICT" duration-ms="766" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Cau2.RemoveProduct@6f4a47c7]" started-at="2025-12-14T23:23:22 ICT" name="setUp" finished-at="2025-12-14T23:23:28 ICT" duration-ms="6736" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="testRemoveProductFromCart()[pri:0, instance:Cau2.RemoveProduct@6200f9cb]" started-at="2025-12-09T10:40:17 ICT" name="testRemoveProductFromCart" finished-at="2025-12-09T10:40:24 ICT" duration-ms="7617" status="PASS">
+        <test-method signature="testRemoveProductFromCart(java.util.Map)[pri:0, instance:Cau2.RemoveProduct@6f4a47c7]" started-at="2025-12-14T23:23:28 ICT" name="testRemoveProductFromCart" data-provider="excelData" finished-at="2025-12-14T23:23:40 ICT" duration-ms="11211" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ProductIndex=0.0, UserName=standard_user, Password=secret_sauce}]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
             <line>
               <![CDATA[Step 1 : Điều hướng đến trang đăng nhập]]>
@@ -97,7 +175,47 @@
             </line>
           </reporter-output>
         </test-method> <!-- testRemoveProductFromCart -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:Cau2.RemoveProduct@6200f9cb]" started-at="2025-12-09T10:40:24 ICT" name="tearDown" finished-at="2025-12-09T10:40:25 ICT" duration-ms="228" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Cau2.RemoveProduct@6f4a47c7]" started-at="2025-12-14T23:23:40 ICT" name="tearDown" finished-at="2025-12-14T23:23:41 ICT" duration-ms="1347" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setUp()[pri:0, instance:Cau2.RemoveProduct@6f4a47c7]" started-at="2025-12-14T23:23:41 ICT" name="setUp" finished-at="2025-12-14T23:23:46 ICT" duration-ms="4979" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="testRemoveProductFromCart(java.util.Map)[pri:0, instance:Cau2.RemoveProduct@6f4a47c7]" started-at="2025-12-14T23:23:46 ICT" name="testRemoveProductFromCart" data-provider="excelData" finished-at="2025-12-14T23:23:57 ICT" duration-ms="10525" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[{ProductIndex=1.0, UserName=standard_user, Password=secret_sauce}]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+            <line>
+              <![CDATA[Step 1 : Điều hướng đến trang đăng nhập]]>
+            </line>
+            <line>
+              <![CDATA[Step 2 : Đăng nhập với tài khoản hợp lệ]]>
+            </line>
+            <line>
+              <![CDATA[Step 3: Kiểm tra có sản phẩm hiển thị trên trang Inventory]]>
+            </line>
+            <line>
+              <![CDATA[Step 4 : Thêm một sản phẩm vào giỏ hàng]]>
+            </line>
+            <line>
+              <![CDATA[Step 5 : Xác minh sản phẩm đã được thêm vào giỏ hàng]]>
+            </line>
+            <line>
+              <![CDATA[Step 6 : Xóa sản phẩm khỏi giỏ hàng]]>
+            </line>
+            <line>
+              <![CDATA[Step 7 : Xác minh sản phẩm đã được xóa khỏi giỏ hàng]]>
+            </line>
+          </reporter-output>
+        </test-method> <!-- testRemoveProductFromCart -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:Cau2.RemoveProduct@6f4a47c7]" started-at="2025-12-14T23:23:57 ICT" name="tearDown" finished-at="2025-12-14T23:23:58 ICT" duration-ms="1279" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
